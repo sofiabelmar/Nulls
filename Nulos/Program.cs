@@ -18,7 +18,12 @@ namespace Nulos
             Console.WriteLine("Marca: " + miCarro.Marca);
             Console.WriteLine("Kilometraje: " + miCarro.Kilometraje);
 
-            if (miCarro.DueñoCarro != null)
+            miCarro.DueñoCarro = new Dueño();
+            miCarro.DueñoCarro.Nombre = "Pedro";
+
+            miCarro.DueñoCarro = null;  //Pudeo Usar null para eliminar valores
+
+            if (miCarro.DueñoCarro != null)  //null para diferenciar valores vacios
             {
                 Console.WriteLine("Dueño: " + miCarro.DueñoCarro.Nombre);
             }
